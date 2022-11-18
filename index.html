@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form class="form">
+    <select data-type>
+      <option value="echo">Echo</option>
+      <option value="delivery.start">Delivery Start</option>
+      <option value="delivery.track">Delivery Track</option>
+      <option value="delivery.end">Delivery End</option>
+      <option value="listen.order.locations">Listen Order Locations</option>
+      <option value="listen.delivery.inprogress">Listen new inprogress Deliveries</option>
+      <option value="listen.delivery.completed">Listen completed Deliveries</option>
+      <option value="listen.delivery.destination.update">Listen updates to delivery destination</option>
+    </select>
+    
+    <textarea data-payload placeholder="Payload"></textarea>
+    <button>Send</button>
+  </form>
+
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
