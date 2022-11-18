@@ -16,6 +16,11 @@ export class DurableSocket {
     this._log("[socket connected]")
   }
 
+  _handleMessage(event) {
+    const payload = JSON.parse(event.data)
+    this._messageHandler(payload)
+  }
+
   _handleClose() {
     this._log("[closing socket]")
     this.connect()
@@ -26,7 +31,7 @@ export class DurableSocket {
     this._socket = new WebSocket(this._url)
     {
       this._socket.addEventListener("open", this._handleOpen.bind(this))
-      this._socket.addEventListener("message", this._messageHandler)
+      this._socket.addEventListener("message", this._handleMessage.bind(this))
       this._socket.addEventListener("close", this._handleClose.bind(this))
     }
 

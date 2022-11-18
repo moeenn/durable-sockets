@@ -5,8 +5,8 @@ function main() {
   const url = "ws://deliverylogisticsbackend-env.eba-qgmp3ib2.ap-northeast-1.elasticbeanstalk.com/ws"
   // const url = "ws://localhost:5000/ws"
 
-  const socket = new DurableSocket(url, event => {
-    console.log("[message]", JSON.parse(event.data))
+  const socket = new DurableSocket(url, payload => {
+    console.log("[message]", payload)
   })
 
   socket.connect()

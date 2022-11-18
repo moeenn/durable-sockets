@@ -11,8 +11,8 @@ This package attempts to solve these issues.
 ## Usage
 ```javascript
 /* configuring the websocket */
-const socket = new DurableSocket(url, event => {
-  console.log("[message]", JSON.parse(event.data))
+const socket = new DurableSocket(url, payload => {
+  console.log("[message]", payload)
 })
 
 /* connecting a websocket */
