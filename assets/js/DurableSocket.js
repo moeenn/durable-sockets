@@ -42,6 +42,11 @@ export class DurableSocket {
     }
   }
 
+  /**
+   *  if the socket if not connected when attempting to send a message, 
+   *  the message will be added to queue and processed when the socket
+   *  is connected again
+  */
   sendMessage(data) {
     if (this.status !== "OPEN") {
       this._queue.push(data)
