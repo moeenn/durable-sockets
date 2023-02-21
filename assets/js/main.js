@@ -7,6 +7,7 @@ const config = {
     { name: "Echo", value: "echo" },
     { name: "Subscribe Test", value: "sub.test" },
     { name: "Send to Test", value: "send.test" },
+    { name: "Delivery start", value: "delivery.start" },
   ]
 }
 
